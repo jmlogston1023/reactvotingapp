@@ -1,2 +1,0 @@
-# reactvotingapp
-React voting app
