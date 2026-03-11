@@ -9,7 +9,7 @@ function Results() {
     const fetchResults = async () => {
 
       const res = await axios.get(
-        "http://127.0.0.1:8000/api/results/1/"
+        "/api/results/1/"
       );
 
       setResults(res.data);

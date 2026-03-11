@@ -10,7 +10,8 @@ SECRET_KEY = 'change-this'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+#ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '35.238.212.138', '0.0.0.0.']
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -41,7 +42,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'voting_app',
-        'USER': 'root',
+        'USER': 'votinguser',
         'PASSWORD': 'L0gger33$',
         'HOST': 'localhost',
         'PORT': '3306',
@@ -79,3 +80,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "briarwoodoaksestatescomm@gmail.com"
 EMAIL_HOST_PASSWORD = "rlxf dbbs aiuw lvir"
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+APPEND_SLASH = True

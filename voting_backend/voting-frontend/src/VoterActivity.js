@@ -7,7 +7,7 @@ function VoterActivity(){
 
   useEffect(()=>{
 
-    axios.get("http://127.0.0.1:8000/api/admin/voter-activity/")
+    axios.get("/api/admin/voter-activity/")
       .then(res => setVoters(res.data))
 
   },[])

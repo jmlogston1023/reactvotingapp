@@ -13,7 +13,7 @@ function Login() {
   const requestCode = async () => {
     try {
       await axios.post(
-        "http://127.0.0.1:8000/api/auth/request-code/",
+        "/api/auth/request-code/",
         { email }
       );
 
@@ -28,7 +28,7 @@ function Login() {
   const verifyCode = async () => {
     try {
       const res = await axios.post(
-        "http://127.0.0.1:8000/api/auth/verify-code/",
+        "/api/auth/verify-code/",
         { email, code }
       );
 

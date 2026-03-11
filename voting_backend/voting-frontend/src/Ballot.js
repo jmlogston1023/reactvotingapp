@@ -10,8 +10,9 @@ function Ballot() {
   useEffect(() => {
     const fetchBallot = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/ballot/");
-        setBallot(res.data);
+        //const res = await axios.get("http://34.45.46.89:8000/api/ballot/");
+        const res = await axios.get("/api/ballot/");
+	setBallot(res.data);
       } catch (err) {
         console.error(err);
       }
@@ -33,7 +34,7 @@ function Ballot() {
 
   const submitVote = async () => {
     try {
-      const res = await axios.post("http://127.0.0.1:8000/api/vote/", {
+      const res = await axios.post("/api/vote/", {
         user_id,
         ballot_id: ballot.ballot_id,
         candidate_ids: selected,
